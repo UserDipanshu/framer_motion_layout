@@ -1,0 +1,57 @@
+* {
+	margin: 0;
+	padding: 0;
+}
+.boxCont {
+	width: 90vw;
+	background-color: green;
+	margin: auto;
+	margin-top: 3%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+   min-height: 90vh;
+}
+
+.cont {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	width: 90%;
+	background-color: #000000;
+	row-gap: 10px;
+	column-gap: 15px;
+	flex-wrap: wrap;
+	padding: 20px; /* Optional: Add padding to create space between the items and container edges */
+  position:relative;
+}
+
+.itemCont {
+	cursor: pointer;
+	opacity: 1;
+	background-color: red;
+	border-radius: 20px;
+	height: 160px;
+	width: 300px;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+}
+
+.selectedItem {
+  background-color: #003eff;
+    width: 57%;
+    position: relative;
+    z-index: 1;
+    border-radius: 1.2rem;
+    transform: none;
+    position: absolute;
+    transform-origin: 50% 50% 0px;
+    display: flex;
+    justify-content: center;
+    justify-content: center;
+    align-items: center;
+    height: 71%;
+    flex-direction: column;
+}
