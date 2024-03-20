@@ -20,10 +20,10 @@ jobs:
       run: npm run build
       
     - name: Deploy to Bluehost
-      uses: easingthemes/deploy-ftp-action@v3.0.1
+      uses: SamKirkland/FTP-Deploy-Action@4.0.0
       with:
-        ftp-server: ftp.mrmprocom.com
-        ftp-username: elesh@test.mrmprocom.com
-        ftp-password: $cj!Q5&c#yET
+        server: ftp.mrmprocom.com
+        username: ${{ secrets.FTP_USERNAME }}
+        password: ${{ secrets.FTP_PASSWORD }}
         local-dir: dist
         remote-dir: /
