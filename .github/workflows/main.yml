@@ -24,7 +24,7 @@ jobs:
       with:
         server: ftp.mrmprocom.com
         username: elesh@test.mrmprocom.com
-        password: Rr0lj!qPfQfK
+        password: $cj!Q5&c#yET
         port: 21
         protocol: ftp
         local-dir: dist/
