@@ -1,0 +1,29 @@
+name: Deploy to Bluehost
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v2
+      
+    - name: Install dependencies
+      run: npm install
+      
+    - name: Build
+      run: npm run build
+      
+    - name: Deploy to Bluehost
+      uses: easingthemes/deploy-ftp-action@v3.0.1
+      with:
+        ftp-server: ftp.mrmprocom.com
+        ftp-username: elesh@test.mrmprocom.com
+        ftp-password: $cj!Q5&c#yET
+        local-dir: dist
+        remote-dir: /
